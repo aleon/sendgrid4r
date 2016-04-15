@@ -60,7 +60,7 @@ module SendGrid4r
         SendGrid4r::REST::Subusers.create_subusers(resp)
       end
 
-      def post_subuser(username:, email:, password:, ips:, &block)
+      def post_subuser(username: nil, email: nil, password: nil, ips: nil, &block)
         params = {}
         params['username'] = username
         params['email'] = email
